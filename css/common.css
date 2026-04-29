@@ -34,6 +34,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+ font-size: var(--base-font);
 }
 
 /* 폰트 위계 */
@@ -79,4 +80,34 @@ body {
 .btn-primary{
   background: var(--primary);
   color:var(--secondary);
+}
+
+/* 폼 요소 */
+.hero{
+  background: var(--hero);
+}
+form{
+  width: 350px;
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+
+}
+form .field{
+  height: calc(var(--base-unit * 2));
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid #000;
+border-radius: 3px;
+align-items: center;
+ color: var(--light--gray); 
+}
+form .field input{
+  font-style: italic;
+  color: var(--black);
+}
+form .field input::placeholder{
+   color: var(--super--light--gray); 
 }
