@@ -35,13 +35,16 @@
 
 body {
   font-family: "Open Sans", sans-serif;
- font-size: var(--base-font);
+  font-size:var(--base-font);
 }
 
 /* 폰트 위계 */
 .text-heading-xl {
   font-size: var(--heading--x-l);
   line-height: calc(var(--base-unit) * 3);
+  color: var(--hero--title);
+  text-transform:uppercase;
+  letter-spacing:2%;
 }
 
 .text-heading-s {
@@ -52,6 +55,7 @@ body {
 .text-body-l {
   font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
+  font-weight: 300;
 }
 
 .text-body-m {
@@ -68,7 +72,6 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-
 /* 링크 버튼 */
 .btn{
   height: 39px;
@@ -90,35 +93,36 @@ body {
   background: var(--primary);
   color:var(--secondary);
 }
+.btn.big{
+  height: calc(var(--base-unit) * 2);
+  padding: 0 30px;
+}
 
 /* 폼 요소 */
 .hero{
   background: var(--hero);
 }
 form{
-  width: 350px;
+  width: 350px;  
   display: flex;
   flex-direction:column;
-  gap: 10px;
-
+  gap:10px;
 }
 form .field{
-  height: calc(var(--base-unit * 2));
+  height: calc(var(--base-unit) * 2);
+  background: var(--white);
+  border-radius:3px;
   padding: 0 20px;
   display: flex;
-  gap: 10px;
-  background: var(--white);
-  border: 1px solid #000;
-border-radius: 3px;
-align-items: center;
- color: var(--light--gray); 
+  align-items: center;
+  color:var(--light--gray);
 }
 form .field input{
-  font-style: italic;
-  color: var(--black);
+  font-style:italic;
+  color:var(--black);
 }
 form .field input::placeholder{
-   color: var(--super--light--gray); 
+  color:var(--super--light--gray);
 }
 form button{
   height: calc(var(--base-unit) * 2);
@@ -140,10 +144,10 @@ form button{
 .inner-pd{
   padding: calc(var(--base-unit) * 3) 0;
 }
-
 .inner-top-pd{
-  padding-top: calc(var(--base-unit) * 3) 0;
+  padding-top: calc(var(--base-unit) * 3);
 }
+
 /* 헤더 */
 body > header {
   background: var(--white);
@@ -152,12 +156,14 @@ body > header {
 }
 .logo span{
   position: absolute;
-	clip-path:inset(50%);
-	width: 1px;
-	height: 1px;
-	overflow:hidden;	
+  clip-path:inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 header nav ul{
-  gap: 10px;
-
+  gap:10px;
+}
+header nav ul li:first-child{
+  margin-right: 40px;
 }
