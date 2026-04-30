@@ -188,6 +188,7 @@ header nav ul li:first-child {
 .slidecontainer {
   width: 300%; /* js 부모 너비파악, 슬라이드 개수 파악, 너비 계산 지정할 예정 */
   display: flex;
+  transition: 0.3s ease-out;
 }
 .slidecontainer li {
   width: 100%;
@@ -204,4 +205,13 @@ header nav ul li:first-child {
   align-items: center;
   color: var(--light--gray);
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slidewrapper button.prev {
+  left: 0;
+}
+.slidewrapper button.next {
+  right: 0;
 }
